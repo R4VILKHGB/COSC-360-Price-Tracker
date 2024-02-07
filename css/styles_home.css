@@ -1,0 +1,21 @@
+.content {
+    border-bottom: solid 1px gray;
+    margin: 2em 4em 2em 4em;
+}
+
+.menu-text {
+    font-weight: bold;
+}
+
+.green {
+    color: green;
+}
+
+.menu_horizontal {
+    list-style: none;
+}
+
+
+li{
+    float: left;
+}
