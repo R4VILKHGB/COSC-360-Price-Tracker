@@ -6,29 +6,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In to Your Account</title>
+    <title>Login</title>
     <link rel="stylesheet" href="css/styles_login.css">
-    <script defer src="javaScript/login.js"></script>
+    <script defer src="javaScript/login.js"></script> <!--executed after HMTL loads due to defer-->
 </head>
 
 <body>
-    <main id="main">
-        <h1 id="login-header">Login</h1>
-        <div id="login-error-msg-holder">
-            <p id="login-error-msg"> Invalid username <span id="login-error-msg-line2"> and/or password</span></p>
+    <main id="main-login">
+        <h1>Login</h1> <!--Login title-->
+        <div id="login-error-msg-holder"> <!--Error message-->
+            <p id="login-error-msg"> Invalid username <span id="login-error-msg2"> and/or password</span></p>
         </div>
 
-        <form id="login-form"> <!--Login Form-->
-            <input type="text" name="username" id="username-f" class="login-form-field" placeholder="Username">
-            <input type="text" name="password" id="password-f" class="login-form-field" placeholder="Password">
-            <input type="submit" value="Login" id="login-form-sub">
-    
+        <form id="login-form"> <!--Login form with 3 inputs-->
+            <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Enter your username.">
+            <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Enter your password.">
+            <input type="submit" value="Login" id="login-submit-button"> 
         </form>
 
     </main>
 
     
-
 </body>
 
 </html>

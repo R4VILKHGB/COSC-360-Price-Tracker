@@ -1,19 +1,18 @@
 
 const loginForm= document.getElementById("login-form");
-const loginSub= document.getElementById("login-form-submit");
-const loginErrMsg= document.getElementById("login-error-msg");
+const loginSubmit= document.getElementById("login-submit-button");
+const loginErrorMsg= document.getElementById("login-error-msg");
 
-loginSub.addEventListener("click", (e) => {
+loginSubmit.addEventListener("click", (e) => {
     e.preventDefault();
     const username= loginForm.username.value;
     const password= loginForm.password.value;
 
-
-    if(username== "customer" && password== "pricetracker123"){
+    if(username== "customer" && password== "customerpassword"){
         alert("Login successfull.");
         location.reload();
     } else {
-        loginErrMsg.style.opacity= 1;
+        loginErrorMsg.style.opacity= 1;
     }
 
     
