@@ -60,16 +60,17 @@ body{
     padding: 0px 0px 5px 5px;
 }
 
-#login-submit-button{
-    width: 100%;
+#login-submit-button, #create-account-button{
+    width: calc(100%);
     padding: 7px;
-    border: none;
+    border: none;   
     border-radius: 5px;
     color: aqua;
     font-weight: bold;
     background-color: cadetblue;
     cursor: pointer; /*when hovering over the submit button*/
     outline: none;
+    margin-bottom: 5px;
 }
 
 
