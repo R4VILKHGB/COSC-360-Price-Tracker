@@ -1,6 +1,7 @@
 .content {
     border-bottom: solid 1px gray;
-    margin: 2em 4em 2em 4em;
+    margin: 2em 5em 2em 5em;
+    padding: 1em;
 }
 
 .menu-text {
@@ -11,11 +12,43 @@
     color: green;
 }
 
+.c1 {
+    color: #ab3838;
+}
+
+.c2 {
+    color: #de8d3d;
+}
+
+.c3 {
+    color: #a19b86;
+}
+
 .menu_horizontal {
     list-style: none;
 }
 
+#offset-center {
+    margin-left : 4em;
+}
 
 li{
     float: left;
+}
+
+#signupbtn {
+    background: green;
+    color: white;
+    border: 2px solid green;
+    transition: none;
+    margin: 0;
+    min-width: 250px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0.85em 1em;
+    border-radius: 3px;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.25rem;
 }

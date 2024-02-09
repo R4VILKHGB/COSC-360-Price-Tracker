@@ -14,7 +14,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
-        <a class="navbar-brand" href="#"><img src = "images/camel_logo.png" title="Visit our homepage"></a>
+        <a class="navbar-brand" href="home.html"><img src = "images/camel_logo.png" title="Visit our homepage"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>
         </button> 
@@ -25,7 +25,7 @@
             </form> 
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> 
                 <li class="nav-item active"> 
-                    <a class="nav-link" href="#">Home 
+                    <a class="nav-link" href="home.html">Home 
                         <span class="sr-only">(current)</span>
                     </a> 
                 </li> 
@@ -36,18 +36,30 @@
                     <a class="nav-link" href="#">Top Price Drops</a>
                 </li> 
                 <li class="nav-item"> 
-                    <a class="nav-link" href="#">About</a> 
+                    <a class="nav-link" href="about.html">About</a> 
+                </li> 
+                <li class="nav-item"> 
+                    <a class="nav-link" href="login.html">Sign-in</a> 
                 </li> 
             </ul> 
             
         </div> 
     </nav>
-
-    <h3>Welcome to camelcamelcamel, a free Amazon price tracker!</h3>
+    
+    <div class="content">
+    <h3 class = "menu-text">Welcome to <span class="c1">camel</span><span class="c2">camel</span><span class="c3">camel</span>, a free Amazon price tracker!</h3>
     <p>Our free Amazon price tracker monitors millions of products and alerts you when prices drop, helping you decide when to buy.</p>
+    </div>
     <div class = "content">
-        <h3>We help <span class="green">you save money</span>.</h2>
-        <a id="signupbtn" class="button large" style="min-width: 250px;" href="#">Create Free Account</a>
+        <table class = "position-table">
+            <tr>
+                <td><h3 class="menu-text" id = "offset-center">We help <span class="green">you save money</span>.</h3></td>
+                <td width = 40%></td>
+                <td><a id="signupbtn" href="registration.html">Create Free Account</a></td>
+            </tr>
+        </table>
+        
+        
     </div>
     <div class = "content">
         <h4>Supported Amazon Countries</h4>
@@ -56,7 +68,7 @@
     <footer>
         <ul class="menu_horizontal">
             <li class="menu-text">Pages: &nbsp &nbsp</li>
-            <li><a href="#">About &nbsp &nbsp</a></li>
+            <li><a href="about.html">About &nbsp &nbsp</a></li>
             <li><a href="#">Terms  &nbsp &nbsp</a></li>
             <li><a href="#">Privacy  &nbsp &nbsp</a></li>
             <li><a href="#">Help</a></li>
