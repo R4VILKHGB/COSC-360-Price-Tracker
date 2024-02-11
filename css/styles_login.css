@@ -18,7 +18,7 @@ li{
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     z-index: 1;
     min-width: 160px; 
-    left: -160px; 
+    left: -120px; 
 }
 
 .dropdown-content a {
@@ -32,7 +32,6 @@ li{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 
 
 #login-form {
