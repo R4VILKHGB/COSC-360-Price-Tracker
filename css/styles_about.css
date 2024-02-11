@@ -15,6 +15,12 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.camel-logo {
+    max-width: 100%; 
+    height: auto;
+    margin-bottom: 20px; 
+}
+
 h2 {
     text-align: center;
     margin-bottom: 20px;
