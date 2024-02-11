@@ -1,37 +1,11 @@
-.menu-text {
-    font-weight: bold;
-}
-
-.green {
-    color: green;
-}
-
-.c1 {
-    color: #ab3838;
-}
-
-.c2 {
-    color: #de8d3d;
-}
-
-.c3 {
-    color: #a19b86;
-}
-
 .menu_horizontal {
     list-style: none;
-}
-
-#offset-center {
-    margin-left : 4em;
 }
 
 li{
     float: left;
 }
 
-
-/* Updated styles for login form */
 #login-form {
     text-align: center;
 }
@@ -43,7 +17,7 @@ li{
 .login-form-field {
     width: 40%; 
     padding: 10px;
-    margin: 10px 0; 
+    margin: 0; 
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
@@ -60,6 +34,7 @@ li{
 #login-submit-button {
     background-color: #007bff;
     color: #fff;
+    padding: 20px;
 }
 
 #login-submit-button:hover {
