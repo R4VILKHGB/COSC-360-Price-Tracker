@@ -1,3 +1,10 @@
+.menu_horizontal {
+    list-style: none;
+}
+
+.menu_horizontal li{
+    float: left;
+}
 
 .container { 
     max-width: 800px;
