@@ -8,17 +8,10 @@
 
 .container { 
     max-width: 800px;
-    margin: 50px auto;
+    margin-left: 30px ;
     background-color: #ffffff;
     border-radius: 8px;
     padding: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.camel-logo {
-    max-width: 100%; 
-    height: auto;
-    margin-bottom: 20px; 
 }
 
 h2 {
