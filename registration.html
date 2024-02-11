@@ -1,27 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="css/styles_login.css">
+    <title>Price Tracker - Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles_registration.css"> 
+
 </head>
+
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="home.html"><img src="images/camel_logo.png" title="Visit our homepage"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Find Amazon Products"
+                    aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Popular Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="top_drops.html">Top Price Drops</a>
+                </li>
+            </ul>
 
-<div class="container">
-    <h2>Create an Account</h2>
-    <form action="process_signup.php" method="post">
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
+            <div class="dropdown">
+                <img src="images/user.png" alt="User Logo" class="user-logo">
+                <div class="dropdown-content">
+                    <a href="login.html">Sign In</a>
+                    <a href="registration.html">Create Free Account</a>
+                </div>
+            </div>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        </div>
+    </nav>
 
-        <button type="submit">Create My Account</button>
-    </form>
-</div>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <div id="registration-form">
+            <form>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control registration-form-field" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="form-control registration-form-field" id="password">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create my account" class="btn btn-primary btn-block"
+                        id="registration-submit-button">
+                </div>
+            </form>
+        </div>
+    </div>
 
+    <footer>
+        <ul class="menu_horizontal">
+            <li class="menu-text">Pages: &nbsp &nbsp</li>
+            <li><a href="about.html">About &nbsp &nbsp</a></li>
+            <li><a href="#">Terms &nbsp &nbsp</a></li>
+            <li><a href="#">Privacy &nbsp &nbsp</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+    </footer>
 </body>
+
 </html>
 
 

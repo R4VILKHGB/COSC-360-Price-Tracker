@@ -1,0 +1,59 @@
+.menu_horizontal {
+    list-style: none;
+}
+
+li{
+    float: left;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    min-width: 160px; 
+    left: -120px; 
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.registration-form-field {
+    width: 40%; 
+    padding: 10px;
+    margin: 0; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#registration-submit-button {
+    width: 40%; 
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#registration-submit-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
