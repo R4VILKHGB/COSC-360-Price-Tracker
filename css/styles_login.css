@@ -1,78 +1,81 @@
-body{
-    height:100%; /*full screen*/
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid; /*grid container*/
-    justify-items: center; /*center grid items horizontally */
-    align-items: center; /*center grid items vertically */
-    background-color: white;
+.menu-text {
+    font-weight: bold;
 }
 
-#main-login{ 
-    width: 50%;
-    height: 70%;
-    display: grid; /*3 row grid*/
-    justify-items: center;
-    align-items: center;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px 2px black;
+.green {
+    color: green;
 }
 
-#login-error-msg-holder{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    justify-items: center;
-    align-items: center;
+.c1 {
+    color: #ab3838;
 }
 
-#login-error-msg{
-    width: 23%;
+.c2 {
+    color: #de8d3d;
+}
+
+.c3 {
+    color: #a19b86;
+}
+
+.menu_horizontal {
+    list-style: none;
+}
+
+#offset-center {
+    margin-left : 4em;
+}
+
+li{
+    float: left;
+}
+
+
+/* Updated styles for login form */
+#login-form {
     text-align: center;
-    margin: 0;
-    padding: 5px;
-    font-size: 12px;
-    font-weight: bold;
-    color: blue;
-    border: 1px solid cadetblue;
-    background-color: blueviolet;
-    opacity: 0; /*will be changed by JavaScript once customer enters data*/
 }
 
-#login-error-msg2{
-    display: block; /*new line*/
+.form-group {
+    text-align: left; 
 }
 
-#login-form{
-    align-self: flex-start;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-}
-
-.login-form-field{
-    border: none;
-    border-bottom: 1px solid cadetblue;
-    margin-bottom: 10px;
-    border-radius: 3px;
-    outline: none;
-    padding: 0px 0px 5px 5px;
-}
-
-#login-submit-button, #create-account-button{
-    width: calc(100%);
-    padding: 7px;
-    border: none;   
+.login-form-field {
+    width: 40%; 
+    padding: 10px;
+    margin: 10px 0; 
+    border: 1px solid #ccc;
     border-radius: 5px;
-    color: aqua;
-    font-weight: bold;
-    background-color: cadetblue;
-    cursor: pointer; /*when hovering over the submit button*/
-    outline: none;
-    margin-bottom: 5px;
+    box-sizing: border-box;
 }
 
+#login-submit-button, #signupbtn {
+    width: 40%; 
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
+#login-submit-button {
+    background-color: #007bff;
+    color: #fff;
+}
 
+#login-submit-button:hover {
+    background-color: #0056b3;
+}
+
+#signupbtn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+#signupbtn:hover {
+    background-color: #218838;
+}
+
+.button-container {
+    margin-top: 20px;
+}
 
