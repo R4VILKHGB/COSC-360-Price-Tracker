@@ -1,5 +1,13 @@
 .menu_horizontal {
     list-style: none;
+    border-top: solid 1px gray;
+    margin: 8em 5em 2em 2.7em;
+    padding: 2em;
+}
+
+.menu-text {
+    font-weight: bold;
+    margin-bottom: -1em;
 }
 
 li{
