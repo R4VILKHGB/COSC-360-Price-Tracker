@@ -22,10 +22,20 @@ session_start();
                 </li> 
                 <li class="nav-item">
                     <a class="nav-link" href="price_drop.php">Top Price Drops</a>
-                </li>  
+                </li> 
+                <?php
+                    if($_SESSION["acctType"] == 1) {
+                        echo "<li class=\"nav-item\"><a class=\"nav-link\" href=\"adminlist.php\">Admin Portal</a></li>";
+                    }
+                ?> 
             </ul> 
             
             <?php echo $_SESSION["currentUser"];?>
+            <?php
+                if($_SESSION["acctType"] == 1) {
+                    echo "(Administrator)";
+                }
+            ?>
             <div class="dropdown">
                 <img src="images/user.png" alt="User Logo" class="user-logo">
                 <div class="dropdown-content">

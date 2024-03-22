@@ -27,6 +27,7 @@ else
 {    
     $uname = '';
     $password = '';
+    $acctType = 0;
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if(isset($_POST["username"])) {
@@ -67,6 +68,7 @@ else
       echo $row['username']." ".$row['password']."<br/>";
       echo $password."<br>";
       echo "Hashed password: ".md5($row['password'])."<br>";
+      $acctType = $row['acctType'];
       if (strcmp($row['username'], $uname) == 0) {
         $userexists = TRUE;
         if (strcmp($row['password'], md5($password)) == 0) {
@@ -78,6 +80,7 @@ else
     if ($userexists) {
         if($validpwd) {
             $_SESSION["currentUser"] = $uname;
+            $_SESSION["acctType"] = $acctType;
             echo "<p>The user has a valid account</p>";       
         } else {
             $output = "<p>Invalid Password!</p>";
