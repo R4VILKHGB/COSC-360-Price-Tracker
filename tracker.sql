@@ -100,8 +100,8 @@ INSERT INTO Users (Username, Email, Password, Name, Surname, Address, City, Stat
     
 INSERT INTO Comments (UserID, ProductID, Comment) VALUES 
     (1, 5, 'This is a great product.'),
-    (2, 7, 'What\s the max capacity?'),
-    (3, 4, 'I\'m really impressed with this item.. gotta buy it.'),
+    (2, 7, 'What is the max capacity?'),
+    (3, 4, 'I am really impressed with this item.. gotta buy it.'),
     (1, 10, 'Not bad looking. Any chargers with it?'),
     (5, 8, 'Decent packaging.');
 
