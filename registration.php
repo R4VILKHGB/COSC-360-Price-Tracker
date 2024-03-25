@@ -30,15 +30,21 @@
 
 <body>
     <?php
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
         include 'navbar.php';
     ?>
 
-<?php
-    if($_SESSION["currentUser"] != null) {
-        header('Location: home.php');
-        exit();
-    }
-?>
+    <?php
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }       
+        if(isset($_SESSION["currentUser"]) && $_SESSION["currentUser"] != null) {
+            header('Location: home.php');
+            exit();
+        }
+    ?>
 
     <div class="container">
         <h1>Sign Up</h1>
@@ -46,7 +52,7 @@
             <form action = "signup_processing.php" method = "POST" id = "mainForm">
                 <div id="login-error-msg-holder"> 
                     <?php
-                        if ($_SESSION["Error_reg"] != null || $_SESSION["Error_reg"] != "") {
+                        if (isset($_SESSION["Error_reg"]) && $_SESSION["Error_reg"] != null) {
                             echo "<p id=\"login-error-msg\">".$_SESSION["Error_reg"]."</p>";
                         }
                     ?>

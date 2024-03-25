@@ -13,16 +13,19 @@
 
 <body>
     <?php
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
         include 'navbar.php';
     ?>
     <div class="container">
         <h1>Log In to Your Account</h1>
         <div id="login-error-msg-holder"> 
-            <?php
-                if ($_SESSION["Error_login"] != null || $_SESSION["Error_login"] != "") {
-                    echo "<p id=\"login-error-msg\">".$_SESSION["Error_login"]."</p>";
-                }
-            ?>
+        <?php
+            if (isset($_SESSION["Error_login"])) {
+                echo "<p id=\"login-error-msg\">" . $_SESSION["Error_login"] . "</p>";
+            }
+        ?>
         </div>
         <div id="login-form">
             <form action = "login_processing.php" method = "POST">
