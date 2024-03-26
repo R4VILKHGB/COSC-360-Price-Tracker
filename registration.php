@@ -8,24 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles_registration.css"> 
     <script type="text/javascript" src="scripts/confirmpwd.js"></script>
-    <script>
-      function checkPasswordMatch (e) {
-        var pass1 = document.getElementById ("password").value;
-        var pass2 = document.getElementById ("password-check").value;
-        //console.log ('checkPasswordMatch p1:', pass1, 'p2:', pass2);
-       
-        if (pass1 !== pass2) {
-          makeRed (document.getElementById ("password-check"));
-          window.alert ('Password mismatch - make sure the two password fields are same');
-          e.preventDefault();
-          e.stopPropagation();
-          return false;
-        }
-
-        return true;
-      }
-    </script>
-
 </head>
 
 <body>
