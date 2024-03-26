@@ -1,34 +1,25 @@
-const loginForm = document.getElementById("login-form");
-const loginSubmit = document.getElementById("login-submit-button");
-const loginErrorMsg = document.getElementById("login-error-msg");
-const createAccountButton = document.getElementById("signupbtn");
+document.getElementById("login-submit-button").addEventListener("click", function (event) {
+    event.preventDefault();
+    const form = document.getElementById("loginForm");
+    const username = form.username.value.trim();
+    const password = form.password.value.trim();
+    let isValid = true;
 
-loginSubmit.addEventListener("click", (e) => {
-    e.preventDefault();
-    const username = loginForm.username.value;
-    const password = loginForm.password.value;
+    document.getElementById("usernameError").textContent = "";
+    document.getElementById("passwordError").textContent = "";
 
-    if (username.trim() === "" || password.trim() === "") {
-        alert("Please enter username and password.");
-    } else {
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", "login_processing.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                const response = xhr.responseText;
-                if (response === "success") {
-                    window.location.href = "home.php";
-                } else {
-                    loginErrorMsg.textContent = "Invalid username or password.";
-                }
-            }
-        };
-        xhr.send("username=" + encodeURIComponent(username) + "&password=" + encodeURIComponent(password));
+    if (username === "") {
+        document.getElementById("usernameError").textContent = "Please enter username or email.";
+        isValid = false;
     }
-});
 
-createAccountButton.addEventListener("click", (e) => {
-    window.location.href = "registration.php";
+    if (password === "") {
+        document.getElementById("passwordError").textContent = "Please enter password.";
+        isValid = false;
+    }
+
+    if (isValid) {
+        form.submit();
+    }
 });
 
