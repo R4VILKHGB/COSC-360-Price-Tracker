@@ -62,7 +62,11 @@
                         } else {
                             echo "General User";
                         }
-                        echo "</td><td><a href = \"adminlist.php?delete=".$row['username']."\">Delete User</a></td></tr>";
+                        if ($row['acctType'] == 1) {
+                            echo "</td><td>Can't delete Administrators</td></tr>";
+                        } else {
+                            echo "</td><td><a href = \"adminlist.php?delete=".$row['username']."\">Delete User</a></td></tr>";
+                        }
                     }
 
                     mysqli_free_result($results);

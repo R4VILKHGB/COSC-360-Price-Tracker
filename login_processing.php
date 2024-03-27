@@ -68,11 +68,11 @@ else
       echo $row['username']." ".$row['password']."<br/>";
       echo $password."<br>";
       echo "Hashed password: ".md5($row['password'])."<br>";
-      $acctType = $row['acctType'];
       if (strcmp($row['username'], $uname) == 0) {
         $userexists = TRUE;
         if (strcmp($row['password'], md5($password)) == 0) {
             $validpwd = TRUE;
+            $acctType = $row['acctType'];
         }
       }
     }
