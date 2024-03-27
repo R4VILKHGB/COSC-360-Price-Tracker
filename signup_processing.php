@@ -8,9 +8,9 @@ $_SESSION["Error_reg"] = null;
 <?php
 
 $host = "localhost";
-$database = "Project";
-$user = "root";
-$password = "";
+                $database = "db_73975104";
+                $user = "73975104";
+                $password = "73975104";
 /*
 $host = "localhost";
 $database = "lab9";
