@@ -16,6 +16,12 @@
         }
         include 'navbar.php';
     ?>
+    <?php      
+        if(isset($_SESSION["currentUser"]) && $_SESSION["currentUser"] != null) {
+            header('Location: home.php');
+            exit();
+        }
+    ?>
     <div class="container">
         <h1>Log In to Your Account</h1>
         <div id="login-error-msg-holder"> 

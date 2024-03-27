@@ -18,10 +18,7 @@
         include 'navbar.php';
     ?>
 
-    <?php
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }       
+    <?php      
         if(isset($_SESSION["currentUser"]) && $_SESSION["currentUser"] != null) {
             header('Location: home.php');
             exit();
