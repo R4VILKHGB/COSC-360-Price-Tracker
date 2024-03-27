@@ -8,9 +8,9 @@ $_SESSION["Error_login"] = null;
 <?php
 
 $host = "localhost";
-$database = "Project";
-$user = "root";
-$password = "";
+                $database = "db_73975104";
+                $user = "73975104";
+                $password = "73975104";
 
 //$connection = mysqli_connect($host, $user, $password, $database);
 $connection = mysqli_connect($host, $user, $password, $database);
