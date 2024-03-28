@@ -26,10 +26,10 @@
                 <td><h3 class="menu-text" id = "offset-center">We help <span class="green">you save money</span>.</h3></td>
                 <td width = 40%></td>
                 <?php
-                    if ($_SESSION["currentUser"] == null || $_SESSION["currentUser"] == "") {
-                        echo "<td><a id=\"signupbtn\" href=\"registration.php\">Create Free Account</a></td>";
-                    }
-                ?>   
+                if (empty($_SESSION["currentUser"])) {
+                    echo "<td><a id=\"signupbtn\" href=\"registration.php\">Create Free Account</a></td>";
+                }
+                ?>
             </tr>
         </table>
         

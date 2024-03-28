@@ -29,7 +29,14 @@ include 'navbar.php';
         <div class="col-md-6">
             <h2><?php echo htmlspecialchars($productData['product_title']); ?></h2>
             <p><strong>Price:</strong> <?php echo htmlspecialchars($productData['product_price']); ?></p>
-            <p><strong>Original Price:</strong> <?php echo htmlspecialchars($productData['product_original_price']); ?></p>
+            <p><strong>Original Price:</strong> <?php
+                if (isset($productData['product_original_price']) && $productData['product_original_price'] !== null) {
+                    echo htmlspecialchars($productData['product_original_price']);
+                } else {
+                    echo "Unavailable";
+                }
+                ?>
+                ?></p>
             <p><strong>Star Rating:</strong> <?php echo htmlspecialchars($productData['product_star_rating']); ?> / 5</p>
             <p><strong>Number of Ratings:</strong> <?php echo htmlspecialchars($productData['product_num_ratings']); ?></p>
             <p><strong>Availability:</strong> <?php echo htmlspecialchars($productData['product_availability']); ?></p>
