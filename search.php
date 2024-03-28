@@ -1,15 +1,12 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["productUrl"])) {
-    // Extract the ASIN code from the URL
     $url = str_replace("//", "/", $_POST["productUrl"]);
     $parts = explode("/", $url);
     $dp_index = array_search("dp", $parts);
 
-// Output the very next index after "dp" which is the ASIN number
     $asin = $dp_index !== false ? $parts[$dp_index + 1] : "ASIN not found";
 
     if ($asin) {
-        // Initialize cURL session
         $curl = curl_init();
 
         curl_setopt_array($curl, [
@@ -33,15 +30,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["productUrl"])) {
         if ($err) {
             echo "cURL Error #:" . $err;
         } else {
-            // Decode JSON response
             $data = json_decode($response, true);
 
-            // Check if response status is OK
             if ($data['status'] == 'OK') {
-                // Store product data
                 $productData = $data['data'];
 
-                // Redirect to products.php and pass the product data
                 session_start();
                 $_SESSION['productData'] = $productData;
                 header('Location: products.php');

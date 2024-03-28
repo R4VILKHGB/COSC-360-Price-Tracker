@@ -1,5 +1,4 @@
 <?php
-// price_drop.php
 $curl = curl_init();
 
 curl_setopt_array($curl, [
@@ -12,7 +11,7 @@ curl_setopt_array($curl, [
     CURLOPT_CUSTOMREQUEST => "GET",
     CURLOPT_HTTPHEADER => [
         "X-RapidAPI-Host: real-time-amazon-data.p.rapidapi.com",
-        "X-RapidAPI-Key: cdf3508a51mshbe5af6a133567edp158282jsn632c685a4d38" // Replace with your actual API key
+        "X-RapidAPI-Key: cdf3508a51mshbe5af6a133567edp158282jsn632c685a4d38"
     ],
 ]);
 
@@ -26,7 +25,6 @@ if ($err) {
     exit;
 }
 
-// Parse the JSON response
 $deals = json_decode($response, true)['data']['deals'] ?? [];
 ?>
 
@@ -71,7 +69,6 @@ include 'navbar.php';
 include 'footer.php';
 ?>
 
-<!-- Bootstrap JavaScript -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
