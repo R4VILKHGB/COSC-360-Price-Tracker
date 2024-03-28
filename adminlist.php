@@ -33,7 +33,7 @@
                 else
                 {
                     //good connection, so do you thing
-                    $sql = "SELECT * FROM users;";
+                    $sql = "SELECT * FROM Users;";
 
                     $results = mysqli_query($connection, $sql);
 
@@ -48,7 +48,7 @@
                     while ($row = mysqli_fetch_assoc($results))
                     {
                         if (strcmp($row['username'], $deluser) == 0) {
-                            $sql_del = "DELETE FROM users WHERE username = ?;";
+                            $sql_del = "DELETE FROM Users WHERE username = ?;";
                             if ($statement = mysqli_prepare($connection, $sql_del)) {
                                 mysqli_stmt_bind_param($statement, 's', $deluser);
                                 

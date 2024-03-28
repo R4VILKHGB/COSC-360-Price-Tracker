@@ -31,7 +31,7 @@ if($error != null)
 else
 {
     //good connection, so do you thing
-    $sql = "SELECT * FROM users;";
+    $sql = "SELECT * FROM Users;";
 
     $results = mysqli_query($connection, $sql);
 
@@ -96,7 +96,7 @@ else
       
       //$sql = "INSERT INTO `users` (`username`, `firstName`, `lastName`, `email`, `password`) VALUES
       //('".$uname."', '".$fname."', '".$lname."', '".$email."', '".md5($password)."');";
-      $sql = "INSERT INTO `users` (`username`, `email`, `password`) VALUES (?, ?, ?);";
+      $sql = "INSERT INTO `Users` (`username`, `Email`, `password`, `acctType`) VALUES (?, ?, ?, 0);";
 
       $hashedpwd = md5($password);
 
