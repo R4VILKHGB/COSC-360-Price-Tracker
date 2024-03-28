@@ -3,7 +3,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["productUrl"])) {
     // Extract the ASIN code from the URL
     $url = str_replace("//", "/", $_POST["productUrl"]);
     $parts = explode("/", $url);
-    $asin = isset($parts[3]) ? $parts[3] : null;
+    $dp_index = array_search("dp", $parts);
+
+// Output the very next index after "dp" which is the ASIN number
+    $asin = $dp_index !== false ? $parts[$dp_index + 1] : "ASIN not found";
 
     if ($asin) {
         // Initialize cURL session
