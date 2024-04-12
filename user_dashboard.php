@@ -1,3 +1,37 @@
+<?php
+session_start();
+if (!isset($_SESSION['currentUser'])) {
+    header('Location: login.php');
+    exit();
+}
+
+$host = "localhost";
+$user = "73975104";
+$password = "73975104";
+$database = "db_73975104";
+
+$conn = new mysqli($host, $user, $password, $database);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT username, email FROM users WHERE username = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s", $_SESSION['currentUser']);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $username = $row['username'];
+    $email = $row['email'];
+} else {
+    echo "No user found.";
+}
+$stmt->close();
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +52,10 @@
 
     <div class="container">
         <h1>User Dashboard</h1>
+        <?php
+        echo "<br>";
+        echo "<h1>Welcome, " . $_SESSION['currentUser'] . "!</h1>";
+        ?>
         <section id="tracked-products" class="dashboard-section">
             <h2>Tracked Products</h2>
             <div class="filter-bar">
